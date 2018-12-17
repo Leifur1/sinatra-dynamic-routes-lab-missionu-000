@@ -9,7 +9,7 @@ class App < Sinatra::Base
 
   get '/square/:number' do
     @num = pamams[:number].to_i
-    @square = @num * @num
+    @square = @num * 2
     "#{@square}"
   end
 
