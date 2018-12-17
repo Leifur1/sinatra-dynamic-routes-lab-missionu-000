@@ -8,4 +8,11 @@ class App < Sinatra::Base
     "#{@name}"
   end
 
+  get '/square/:number' do
+    @num = pamarms[:number].to_i
+    @square = @num * @num
+    "#{@square}"
+  end
+  
+
 end
