@@ -2,7 +2,6 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   # Write your code here!
-
   get '/reversename/:name' do
     @name = params[:name].reverse
     "#{@name}"
@@ -30,7 +29,7 @@ class App < Sinatra::Base
     @num1 = params[:number1].to_i
     @num2 = params[:number2].to_i
     @operator = params[:operation]
-    @sum = (@num1 @operator @num2)
+    @sum = @num1 @operator @num2
     "#{@sum}"
   end
 end
